@@ -3,6 +3,7 @@ let currentIndex = 0;
 const images = document.querySelectorAll('.carrossel img');
 const totalImages = images.length;
 
+// Função para mostrar a próxima imagem
 function showNextImage() {
   images[currentIndex].classList.remove('active');
   currentIndex = (currentIndex + 1) % totalImages;
