@@ -1015,3 +1015,49 @@ body.modo-escuro .texto-hero {
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: row; /* Links um ao lado do outro */
+    flex-wrap: wrap; /* Quebra para a próxima linha se não couber */
+    justify-content: center; /* Centraliza os links */
+    gap: 10px; /* Espaçamento entre os links */
+  }
+
+  nav ul li {
+    margin: 0; /* Remove a margem padrão */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 5px 10px; /* Adiciona um pouco de padding */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil para os links */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito hover sutil */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* Links em coluna em telas muito pequenas */
+    align-items: center; /* Centraliza os links */
+  }
+
+  nav ul li a {
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    padding: 5px; /* Ajusta o padding */
+  }
+}
