@@ -35,7 +35,32 @@
       <button data-categoria="florestas">Florestas</button>
     </div>
     <div class="galeria-portfolio">
-      <p class="mensagem-vazia">Nenhuma foto disponível no momento. Em breve, novas paisagens!</p>
+      <p class="mensagem-inicial">Clique em uma das categorias acima para ver as fotos.</p>
+      <!-- Exemplo de fotos -->
+      <figure data-categoria="montanhas">
+        <img src="imagens/montanhas01.jpg" alt="Foto de montanha">
+        <figcaption>Horizontes Elevados</figcaption>
+        <img src="imagens/montanhas2.jpg" alt="Foto de montanha">
+        <figcaption>Cume da Serenidade</figcaption>
+        <img src="imagens/montanhas3.jpg" alt="Foto de montanha">
+        <figcaption>Além das Nuvens</figcaption>
+      </figure>
+      <figure data-categoria="praias">
+        <img src="imagens/praias01.jpg" alt="Foto de praia">
+        <figcaption>Marulhar das Ondas</figcaption>
+        <img src="imagens/praias02.jpg" alt="Foto de praia">
+        <figcaption>Horizonte Infinito</figcaption>
+        <img src="imagens/praias03.jpg" alt="Foto de praia">
+        <figcaption>Beira-Mar Sereno</figcaption>
+      </figure>
+      <figure data-categoria="florestas">
+        <img src="imagens/floresta01.jpg" alt="Foto de floresta">
+        <figcaption>Vida entre Árvores</figcaption>
+        <img src="imagens/floresta02.jpg" alt="Foto de floresta">
+        <figcaption>Sussurros da Floresta</figcaption>
+        <img src="imagens/floresta03.jpg" alt="Foto de floresta">
+        <figcaption>Luz entre as Folhas</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -49,6 +74,11 @@
     </div>
     <p>© 2025 Carlos Moreira Fotografia. Desenvolvido por Marcelo Moraes.</p>
   </footer>
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="Imagem ampliada">
+  </div>
 
   <script src="script.js"></script>
 </body>
