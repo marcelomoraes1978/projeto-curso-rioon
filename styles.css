@@ -793,6 +793,13 @@ header {
   align-items: center;
 }
 
+.logo a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém a cor do texto original */
+  display: flex; /* Alinha a logo e o texto horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
 .logo img {
   width: 180px;
   height: auto;
