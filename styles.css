@@ -425,11 +425,6 @@ color: #2c3e50;
 text-align: right;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row; /* Mantém o menu em linha */
-  gap: 15px; /* Espaçamento entre os itens */
-}
 .galeria-portfolio figure {
   display: none; /* Oculta todas as fotos inicialmente */
 }
@@ -496,12 +491,6 @@ nav ul {
   color: #333;
 }
 
-.mensagem-inicial {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-  margin: 20px 0;
-}
 
 /* Modo Escuro para a página de portfólio */
 body.modo-escuro .portfolio {
@@ -716,6 +705,10 @@ body.modo-escuro .post .btn:hover {
   background-color: #d35400; /* Laranja mais escuro */
 }
 
+.contato .btn {
+    font-size: 14px;
+}
+
 /* Modo Escuro para a página de contato */
 body.modo-escuro .contato {
   background-color: #2c3e50;
@@ -762,110 +755,11 @@ body.modo-escuro .contato .btn:hover {
   }
 }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-/* Cabeçalho */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #2c3e50;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 80px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logo a {
   text-decoration: none; /* Remove o sublinhado do link */
   color: inherit; /* Mantém a cor do texto original */
   display: flex; /* Alinha a logo e o texto horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-}
-
-.logo img {
-  width: 180px;
-  height: auto;
-  margin-right: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-#modoEscuro {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Seção Principal */
-.hero {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  height: 80vh;
-  overflow: hidden;
-}
-
-.carrossel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.carrossel img.active {
-  opacity: 1;
-}
-
-.texto-hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.texto-hero p {
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 /* Seção Destaques */
@@ -1032,28 +926,6 @@ body.modo-escuro .texto-hero {
 
   .logo {
     margin-bottom: 10px;
-  }
-
-  nav ul {
-    flex-direction: row; /* Links um ao lado do outro */
-    flex-wrap: wrap; /* Quebra para a próxima linha se não couber */
-    justify-content: center; /* Centraliza os links */
-    gap: 10px; /* Espaçamento entre os links */
-  }
-
-  nav ul li {
-    margin: 0; /* Remove a margem padrão */
-  }
-
-  nav ul li a {
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    padding: 5px 10px; /* Adiciona um pouco de padding */
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil para os links */
-    border-radius: 5px; /* Bordas arredondadas */
-  }
-
-  nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efeito hover sutil */
   }
 }
 
