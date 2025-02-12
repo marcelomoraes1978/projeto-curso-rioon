@@ -131,10 +131,6 @@ background-color: #d35400; /* Cor de fundo ao passar o mouse */
       
 }
 
-.btn:hover {
-  background-color: #d35400; /* Laranja mais escuro */
-}
-
 /* Destaques do sobre mim */
 .destaques {
   padding: 40px 20px;
