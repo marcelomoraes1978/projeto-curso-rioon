@@ -1,381 +1,401 @@
-/* Reset básico */
+/* Reset básico para remover margens e paddings padrão dos elementos */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove paddings */
+  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
 }
 
+/* Estilos gerais do corpo da página */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  background-color: #f4f4f4; /* Cor de fundo */
 }
 
-/* Cabeçalho */
+/* Estilos do cabeçalho */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Mantém o alinhamento vertical dos itens */
-  padding: 10px 20px; /* Reduzi o padding para evitar espaçamento excessivo */
-  background-color: #2c3e50; /* Azul escuro */
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 80px; /* Defina uma altura fixa para o cabeçalho */
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 10px 20px; /* Espaçamento interno */
+  background-color: #2c3e50; /* Cor de fundo do cabeçalho */
+  color: #fff; /* Cor do texto */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  height: 80px; /* Altura fixa do cabeçalho */
 }
 
+/* Estilos da logo */
 .logo {
-  display: flex;
-  align-items: center;
-  align-self: center; /* Alinha a logo verticalmente no centro do cabeçalho */
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  align-self: center; /* Alinha a logo verticalmente no centro */
 }
 
+/* Estilos da imagem da logo */
 .logo img {
-  width: 180px; /* Aumentei o tamanho da logo */
-  height: auto; /* Mantém a proporção da imagem */
-  margin-right: 10px;
+  width: 180px; /* Largura da logo */
+  height: auto; /* Altura automática para manter a proporção */
+  margin-right: 10px; /* Espaçamento à direita */
 }
 
+/* Estilos da navegação */
 nav ul {
-  list-style: none;
-  display: flex;
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Usa flexbox para alinhar os itens */
 }
 
+/* Estilos dos itens da navegação */
 nav ul li {
-  margin: 0 15px;
+  margin: 0 15px; /* Espaçamento entre os itens */
 }
 
+/* Estilos dos links da navegação */
 nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+  text-decoration: none; /* Remove o sublinhado */
+  color: #fff; /* Cor do texto */
+  font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilos do botão de modo escuro */
 #modoEscuro {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  font-size: 24px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de ponteiro */
+  color: #fff; /* Cor do ícone */
 }
 
-/* Seção Principal */
+/* Estilos da seção hero (destaque principal) */
 .hero {
-  position: relative;
-  text-align: center;
-  color: #fff;
+  position: relative; /* Posicionamento relativo */
+  text-align: center; /* Alinhamento centralizado */
+  color: #fff; /* Cor do texto */
   height: 80vh; /* Altura da seção */
-  overflow: hidden;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
 }
 
+/* Estilos das imagens do carrossel */
 .carrossel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  object-fit: cover; /* Cobrir o espaço sem distorcer */
+  transition: opacity 1s ease-in-out; /* Transição suave de opacidade */
+  opacity: 0; /* Inicialmente invisível */
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Alinhado ao topo */
+  left: 0; /* Alinhado à esquerda */
 }
 
+/* Estilos da imagem ativa no carrossel */
 .carrossel img.active {
-  opacity: 1;
+  opacity: 1; /* Torna a imagem visível */
 }
 
+/* Estilos do texto no hero */
 .texto-hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+  position: absolute; /* Posicionamento absoluto */
+  top: 50%; /* Alinhado ao centro verticalmente */
+  left: 50%; /* Alinhado ao centro horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o elemento */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
+/* Estilos do parágrafo no texto do hero */
 .texto-hero p {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 24px; /* Tamanho da fonte */
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-/* Seção Destaques */
+/* Estilos da seção de destaques */
 .destaques {
-  padding: 40px 20px 20px; /* Reduzi o padding-bottom para 20px */
-  text-align: center;
-  background-color: #ecf0f1; /* Cinza claro */
+  padding: 40px 20px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento centralizado */
+  background-color: #ecf0f1; /* Cor de fundo */
 }
 
+/* Estilos do botão na seção de destaques */
 .destaques .btn {
-  margin-top: 20px; /* Adiciona espaço acima do botão */
-  display: inline-block; /* Garante que o botão ocupe apenas o espaço necessário */
-  padding: 10px 20px; /* Espaçamento interno do botão */
+  margin-top: 20px; /* Espaçamento superior */
+  display: inline-block; /* Exibe como bloco inline */
+  padding: 10px 20px; /* Espaçamento interno */
   background-color: #e67e22; /* Cor de fundo */
   color: #fff; /* Cor do texto */
-  text-decoration: none; /* Remove sublinhado */
+  text-decoration: none; /* Remove o sublinhado */
   border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s; /* Efeito de transição suave */
+  transition: background-color 0.3s; /* Transição suave */
 }
 
+/* Estilos do botão ao passar o mouse */
 .destaques .btn:hover {
   background-color: #d35400; /* Cor de fundo ao passar o mouse */
 }
 
+/* Estilos gerais do botão */
 .btn {
-  padding: 10px 20px;
-  background-color: #e67e22; /* Laranja */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  padding: 10px 20px; /* Espaçamento interno */
+  background-color: #e67e22; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave */
 }
 
-/* Destaques do sobre mim */
+/* Estilos da seção de destaques do sobre mim */
 .destaques {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #ecf0f1; /* Cinza claro */
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento centralizado */
+  background-color: #ecf0f1; /* Cor de fundo */
 }
 
+/* Estilos do título na seção de destaques */
 .destaques h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #2c3e50; /* Azul escuro */
+  font-size: 32px; /* Tamanho da fonte */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  color: #2c3e50; /* Cor do texto */
 }
 
+/* Estilos da galeria de destaques */
 .galeria-destaques {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: space-around; /* Espaço uniforme entre os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 20px; /* Espaçamento entre os itens */
 }
 
+/* Estilos das fotos na galeria de destaques */
 .galeria-destaques .foto {
-  flex: 1 1 300px;
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  background-color: #f4f4f4; /* Cor de fundo para áreas vazias (opcional) */
+  flex: 1 1 300px; /* Flexibilidade do item */
+  max-width: 100%; /* Largura máxima */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  background-color: #f4f4f4; /* Cor de fundo */
 }
 
+/* Estilos das imagens na galeria de destaques */
 .galeria-destaques .foto img {
-  width: 100%;
-  height: auto; /* Altura ajustada automaticamente */
-  border-radius: 10px; /* Mantém o arredondamento */
+  width: 100%; /* Largura total */
+  height: auto; /* Altura automática */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
-/* Rodapé */
+/* Estilos do rodapé */
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2c3e50; /* Azul escuro */
-  color: #fff;
+  text-align: center; /* Alinhamento centralizado */
+  padding: 20px; /* Espaçamento interno */
+  background-color: #2c3e50; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
 }
 
+/* Estilos das imagens das redes sociais no rodapé */
 .redes-sociais img {
-  width: 30px;
-  margin: 0 10px;
-  transition: transform 0.3s;
+  width: 30px; /* Largura da imagem */
+  margin: 0 10px; /* Espaçamento entre as imagens */
+  transition: transform 0.3s; /* Transição suave */
 }
 
+/* Estilos das imagens das redes sociais ao passar o mouse */
 .redes-sociais img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Aumenta o tamanho */
 }
 
-/* Modo Escuro */
+/* Estilos do modo escuro */
 body.modo-escuro .depoimentos {
-  background-color: #2c3e50; /* Fundo escuro */
-  color: #f4f4f4; /* Texto claro */
+  background-color: #2c3e50; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .depoimentos h2 {
-  color: #f4f4f4; /* Texto claro para o título */
+  color: #f4f4f4; /* Cor do título */
 }
 
 body.modo-escuro .card-depoimento {
-  background-color: #1a1a1a; /* Fundo escuro para os cards */
-  color: #f4f4f4; /* Texto claro */
+  background-color: #1a1a1a; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .texto-depoimento {
-  color: #f4f4f4; /* Texto claro dentro dos depoimentos */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .autor-depoimento {
-  color: #e67e22; /* Cor laranja para o nome do autor */
+  color: #e67e22; /* Cor do nome do autor */
 }
 
 body.modo-escuro .sobre-mim {
-  background-color: #2c3e50; /* Fundo escuro para a seção */
-  color: #f4f4f4; /* Texto claro */
+  background-color: #2c3e50; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .sobre-mim {
-  background-color: #1a1a1a; /* Fundo escuro */
-  color: #f4f4f4; /* Texto claro */
+  background-color: #1a1a1a; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .texto-sobre {
-  color: #f4f4f4; /* Garante que o texto fique claro */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .btn {
-  background-color: #3498db; /* Cor do botão no tema escuro */
-  color: #fff; /* Texto do botão claro */
+  background-color: #3498db; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
 }
 
 body.modo-escuro .btn:hover {
-  background-color: #2980b9; /* Cor do botão ao passar o mouse */
+  background-color: #2980b9; /* Cor de fundo ao passar o mouse */
 }
 
 body.modo-escuro {
-  background-color: #1a1a1a;
-  color: #f4f4f4;
+  background-color: #1a1a1a; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro header,
 body.modo-escuro footer {
-  background-color: #121212;
+  background-color: #121212; /* Cor de fundo */
 }
 
 body.modo-escuro .destaques {
-  background-color: #2c3e50;
-  color: #f4f4f4;
+  background-color: #2c3e50; /* Cor de fundo */
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .btn {
-  background-color: #3498db;
-  color: #fff;
+  background-color: #3498db; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
 }
 
 body.modo-escuro .btn:hover {
-  background-color: #2980b9;
+  background-color: #2980b9; /* Cor de fundo ao passar o mouse */
 }
 
 body.modo-escuro nav ul li a {
-  color: #f4f4f4;
+  color: #f4f4f4; /* Cor do texto */
 }
 
 body.modo-escuro .texto-hero {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
 }
 
-/* Filtros do Portfólio */
+/* Estilos dos filtros do portfólio */
 .filtros {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .filtros button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  background-color: #e67e22;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 10px 20px; /* Espaçamento interno */
+  margin: 5px; /* Espaçamento externo */
+  border: none; /* Remove a borda */
+  background-color: #e67e22; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s; /* Transição suave */
 }
 
 .filtros button:hover {
-  background-color: #d35400;
+  background-color: #d35400; /* Cor de fundo ao passar o mouse */
 }
 
 .filtros button.active {
-  background-color: #3498db;
+  background-color: #3498db; /* Cor de fundo do botão ativo */
 }
 
-/* Seção Sobre Mim */
+/* Estilos da seção sobre mim */
 .sobre-mim {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #fff;
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento centralizado */
+  background-color: #fff; /* Cor de fundo */
 }
 
 .sobre-mim h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #2c3e50;
+  font-size: 32px; /* Tamanho da fonte */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  color: #2c3e50; /* Cor do texto */
 }
 
 .conteudo-sobre {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Usa flexbox para alinhar os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o container */
 }
 
 .foto-sobre img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px; /* Largura da imagem */
+  height: auto; /* Altura automática */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 .texto-sobre {
-  max-width: 600px;
-  text-align: left;
+  max-width: 600px; /* Largura máxima */
+  text-align: left; /* Alinhamento à esquerda */
 }
 
 .texto-sobre p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-/* Seção Depoimentos */
+/* Estilos da seção de depoimentos */
 .depoimentos {
-  padding: 40px 20px;
-  background-color: #ecf0f1; /* Cinza claro */
-  text-align: center;
+  padding: 40px 20px; /* Espaçamento interno */
+  background-color: #ecf0f1; /* Cor de fundo */
+  text-align: center; /* Alinhamento centralizado */
 }
 
 .depoimentos h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #2c3e50; /* Azul escuro */
+  font-size: 32px; /* Tamanho da fonte */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  color: #2c3e50; /* Cor do texto */
 }
 
 .cards-depoimentos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Usa flexbox para alinhar os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o container */
 }
 
 .card-depoimento {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  text-align: left;
+  background-color: #fff; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-width: 300px; /* Largura máxima */
+  text-align: left; /* Alinhamento à esquerda */
 }
 
 .texto-depoimento {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  font-style: italic;
-  color: #555;
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  font-style: italic; /* Texto em itálico */
+  color: #555; /* Cor do texto */
 }
 
 .autor-depoimento {
-  font-size: 14px;
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: right;
+  font-size: 14px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  color: #2c3e50; /* Cor do texto */
+  text-align: right; /* Alinhamento à direita */
 }
 
 .galeria-portfolio figure {
-  display: none; /* Oculta todas as fotos inicialmente */
+  display: none; /* Oculta as fotos inicialmente */
 }
 .galeria-portfolio figure[data-categoria] {
   display: block; /* Exibe as fotos correspondentes ao filtro */
@@ -383,40 +403,43 @@ body.modo-escuro .texto-hero {
 
 /* Estilos específicos para a página de portfólio */
 .portfolio {
-  padding: 40px 20px;
-  text-align: center;
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento centralizado */
 }
 
 .filtros {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .filtros button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  background-color: #e67e22;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 10px 20px; /* Espaçamento interno */
+  margin: 5px; /* Espaçamento externo */
+  border: none; /* Remove a borda */
+  background-color: #e67e22; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s; /* Transição suave */
 }
 
 .filtros button:hover {
-  background-color: #d35400;
+  background-color: #d35400; /* Cor de fundo ao passar o mouse */
 }
 
+/* Estiliza os botões ativos na seção de filtros */
 .filtros button.active {
   background-color: #3498db;
 }
 
+/* Define o layout da galeria de portfólio usando CSS Grid */
 .galeria-portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas flexíveis */
+  gap: 20px; /* Espaçamento entre os elementos */
   margin-top: 20px;
 }
 
+/* Estiliza os elementos da galeria de portfólio */
 .galeria-portfolio figure {
   display: none; /* Oculta todas as fotos inicialmente */
   text-align: center;
@@ -427,56 +450,64 @@ body.modo-escuro .texto-hero {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Ajusta as imagens dentro da galeria */
 .galeria-portfolio figure img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
   border-bottom: 1px solid #ddd;
 }
 
+/* Estiliza a legenda da imagem */
 .galeria-portfolio figure figcaption {
   padding: 10px;
   font-size: 16px;
   color: #333;
 }
 
-/* Modo Escuro para a página de portfólio */
+/* Estilos para o modo escuro na página de portfólio */
 body.modo-escuro .portfolio {
   background-color: #2c3e50;
   color: #f4f4f4;
 }
 
+/* Define cores para os botões no modo escuro */
 body.modo-escuro .filtros button {
   background-color: #3498db;
   color: #fff;
 }
 
+/* Efeito de hover nos botões no modo escuro */
 body.modo-escuro .filtros button:hover {
   background-color: #2980b9;
 }
 
+/* Ajustes de estilo para os itens da galeria no modo escuro */
 body.modo-escuro .galeria-portfolio figure {
   background-color: #1a1a1a;
   border-color: #444;
 }
 
+/* Ajusta a cor da legenda no modo escuro */
 body.modo-escuro .galeria-portfolio figure figcaption {
   color: #f4f4f4;
 }
 
+/* Estilos para o lightbox (exibição de imagens em tela cheia) */
 #lightbox {
-  display: none;
+  display: none; /* Oculta o lightbox por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
   z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
+/* Define o tamanho máximo da imagem dentro do lightbox */
 #lightboxImg {
   max-width: 90%;
   max-height: 90%;
@@ -484,6 +515,7 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Estiliza o botão de fechar o lightbox */
 #closeBtn {
   position: absolute;
   top: 20px;
@@ -495,6 +527,7 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   transition: color 0.3s;
 }
 
+/* Muda a cor do botão de fechar ao passar o mouse */
 #closeBtn:hover {
   color: #e67e22;
 }
@@ -505,12 +538,14 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   text-align: center;
 }
 
+/* Estiliza o título do blog */
 .blog h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #2c3e50; /* Azul escuro */
 }
 
+/* Define o layout dos posts no blog */
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -518,6 +553,7 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   margin-top: 20px;
 }
 
+/* Estiliza os posts individuais */
 .post {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -527,11 +563,13 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efeito de hover nos posts */
 .post:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Ajusta as imagens dentro dos posts */
 .post img {
   width: 100%;
   height: 200px;
@@ -539,12 +577,14 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   border-bottom: 1px solid #ddd;
 }
 
+/* Estiliza o título dos posts */
 .post h3 {
   font-size: 20px;
   margin: 15px 10px;
   color: #2c3e50; /* Azul escuro */
 }
 
+/* Estiliza os parágrafos dos posts */
 .post p {
   font-size: 16px;
   color: #666;
@@ -552,6 +592,7 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   line-height: 1.6;
 }
 
+/* Estiliza o botão de leitura dos posts */
 .post .btn {
   display: inline-block;
   margin: 0 10px 15px;
@@ -563,34 +604,40 @@ body.modo-escuro .galeria-portfolio figure figcaption {
   transition: background-color 0.3s;
 }
 
+/* Muda a cor do botão ao passar o mouse */
 .post .btn:hover {
   background-color: #d35400; /* Laranja mais escuro */
 }
 
-/* Modo Escuro para a página do blog */
+/* Estilos para o modo escuro na página do blog */
 body.modo-escuro .blog {
   background-color: #2c3e50;
   color: #f4f4f4;
 }
 
+/* Ajusta os posts no modo escuro */
 body.modo-escuro .post {
   background-color: #1a1a1a;
   border-color: #444;
 }
 
+/* Estilo para títulos de post no modo escuro */
 body.modo-escuro .post h3 {
   color: #f4f4f4;
 }
 
+/* Estilo para parágrafos de post no modo escuro */
 body.modo-escuro .post p {
   color: #f4f4f4;
 }
 
+/* Estilo para botões de post no modo escuro */
 body.modo-escuro .post .btn {
   background-color: #3498db; /* Azul */
   color: #fff;
 }
 
+/* Efeito hover para botões de post no modo escuro */
 body.modo-escuro .post .btn:hover {
   background-color: #2980b9; /* Azul mais escuro */
 }
@@ -602,18 +649,21 @@ body.modo-escuro .post .btn:hover {
   background-color: #fff;
 }
 
+/* Estilo do título principal da página de contato */
 .contato h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #2c3e50; /* Azul escuro */
 }
 
+/* Container do formulário de contato */
 .contato form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
 
+/* Estilo para labels do formulário */
 .contato label {
   display: block;
   font-size: 18px;
@@ -621,6 +671,7 @@ body.modo-escuro .post .btn:hover {
   color: #2c3e50; /* Azul escuro */
 }
 
+/* Estilo para campos de input e textarea */
 .contato input,
 .contato textarea {
   width: 100%;
@@ -631,11 +682,13 @@ body.modo-escuro .post .btn:hover {
   font-size: 16px;
 }
 
+/* Configurações específicas para textarea */
 .contato textarea {
   resize: vertical; /* Permite redimensionar verticalmente */
   min-height: 150px; /* Altura mínima */
 }
 
+/* Estilo do botão do formulário */
 .contato .btn {
   display: block;
   width: 100%;
@@ -649,28 +702,33 @@ body.modo-escuro .post .btn:hover {
   transition: background-color 0.3s;
 }
 
+/* Efeito hover do botão */
 .contato .btn:hover {
   background-color: #d35400; /* Laranja mais escuro */
 }
 
+/* Ajuste de tamanho de fonte para botão */
 .contato .btn {
   font-size: 14px;
 }
 
-/* Modo Escuro para a página de contato */
+/* Estilos do modo escuro para a página de contato */
 body.modo-escuro .contato {
   background-color: #2c3e50;
   color: #f4f4f4;
 }
 
+/* Título no modo escuro */
 body.modo-escuro .contato h2 {
   color: #f4f4f4;
 }
 
+/* Labels no modo escuro */
 body.modo-escuro .contato label {
   color: #f4f4f4;
 }
 
+/* Campos de input e textarea no modo escuro */
 body.modo-escuro .contato input,
 body.modo-escuro .contato textarea {
   background-color: #1a1a1a;
@@ -678,31 +736,37 @@ body.modo-escuro .contato textarea {
   color: #f4f4f4;
 }
 
+/* Botão no modo escuro */
 body.modo-escuro .contato .btn {
   background-color: #3498db; /* Azul */
   color: #fff;
 }
 
+/* Efeito hover do botão no modo escuro */
 body.modo-escuro .contato .btn:hover {
   background-color: #2980b9; /* Azul mais escuro */
 }
 
-/* Responsividade */
+/* Ajustes responsivos para telas médias */
 @media (max-width: 768px) {
+  /* Ajuste do padding do formulário */
   .contato form {
     padding: 0 10px;
   }
 
+  /* Ajuste do tamanho da fonte dos campos */
   .contato input,
   .contato textarea {
     font-size: 14px;
   }
 
+  /* Ajuste do tamanho da fonte do botão */
   .contato .btn {
     font-size: 16px;
   }
 }
 
+/* Estilo do link do logo */
 .logo a {
   text-decoration: none; /* Remove o sublinhado do link */
   color: inherit; /* Mantém a cor do texto original */
@@ -710,19 +774,21 @@ body.modo-escuro .contato .btn:hover {
   align-items: center; /* Centraliza verticalmente */
 }
 
-/* Seção Destaques */
+/* Configuração da seção de destaques */
 .destaques {
   padding: 40px 20px;
   text-align: center;
   background-color: #ecf0f1;
 }
 
+/* Título da seção de destaques */
 .destaques h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #2c3e50;
 }
 
+/* Container da galeria de destaques */
 .galeria-destaques {
   display: flex;
   flex-wrap: wrap;
@@ -730,6 +796,7 @@ body.modo-escuro .contato .btn:hover {
   gap: 20px;
 }
 
+/* Estilo individual das fotos */
 .galeria-destaques .foto {
   flex: 1 1 300px;
   max-width: 100%;
@@ -738,13 +805,14 @@ body.modo-escuro .contato .btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo das imagens dentro das fotos */
 .galeria-destaques .foto img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/* Rodapé */
+/* Estilo do rodapé */
 footer {
   text-align: center;
   padding: 20px;
@@ -752,82 +820,98 @@ footer {
   color: #fff;
 }
 
+/* Estilo dos ícones de redes sociais */
 .redes-sociais img {
   width: 30px;
   margin: 0 10px;
   transition: transform 0.3s;
 }
 
+/* Efeito hover nos ícones de redes sociais */
 .redes-sociais img:hover {
   transform: scale(1.2);
 }
 
-/* Modo Escuro */
+/* Configurações gerais do modo escuro */
 body.modo-escuro {
   background-color: #1a1a1a;
   color: #f4f4f4;
 }
 
+/* Header e footer no modo escuro */
 body.modo-escuro header,
 body.modo-escuro footer {
   background-color: #121212;
 }
 
+/* Seção de destaques no modo escuro */
 body.modo-escuro .destaques {
   background-color: #2c3e50;
   color: #f4f4f4;
 }
 
+/* Botões no modo escuro */
 body.modo-escuro .btn {
   background-color: #3498db;
   color: #fff;
 }
 
+/* Efeito hover dos botões no modo escuro */
 body.modo-escuro .btn:hover {
   background-color: #2980b9;
 }
 
+/* Links da navegação no modo escuro */
 body.modo-escuro nav ul li a {
   color: #f4f4f4;
 }
 
+/* Texto do hero no modo escuro */
 body.modo-escuro .texto-hero {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsividade */
+/* Ajustes responsivos para telas médias */
 @media (max-width: 768px) {
+  /* Ajustes do header */
   header {
     flex-direction: column;
     height: auto;
     padding: 10px;
   }
 
+  /* Ajuste da logo */
   .logo {
     margin-bottom: 10px;
   }
 
+  /* Ajuste do menu de navegação */
   nav ul {
     flex-direction: column;
     gap: 10px;
   }
 
+  /* Ajuste da altura do hero */
   .hero {
     height: 60vh;
   }
 
+  /* Ajuste do texto do hero */
   .texto-hero p {
     font-size: 18px;
   }
 
+  /* Ajuste do título de destaques */
   .destaques h2 {
     font-size: 28px;
   }
 
+  /* Ajuste das fotos da galeria */
   .galeria-destaques .foto {
     flex: 1 1 100%;
   }
 
+  /* Ajustes do formulário de contato */
   .contato form {
     padding: 0 10px;
   }
@@ -842,15 +926,19 @@ body.modo-escuro .texto-hero {
   }
 }
 
+/* Ajustes responsivos para telas pequenas */
 @media (max-width: 480px) {
+  /* Ajuste do texto do hero */
   .texto-hero p {
     font-size: 16px;
   }
 
+  /* Ajuste do título de destaques */
   .destaques h2 {
     font-size: 24px;
   }
 
+  /* Ajustes da página de contato */
   .contato h2 {
     font-size: 28px;
   }
@@ -865,24 +953,30 @@ body.modo-escuro .texto-hero {
   }
 }
 
+/* Ajustes responsivos adicionais para telas médias */
 @media (max-width: 768px) {
+  /* Ajustes do header */
   header {
     flex-direction: column;
     height: auto;
     padding: 10px;
   }
 
+  /* Ajuste da logo */
   .logo {
     margin-bottom: 10px;
   }
 }
 
+/* Ajustes responsivos adicionais para telas pequenas */
 @media (max-width: 480px) {
+  /* Ajuste do menu de navegação */
   nav ul {
     flex-direction: column; /* Links em coluna em telas muito pequenas */
     align-items: center; /* Centraliza os links */
   }
 
+  /* Ajuste dos links de navegação */
   nav ul li a {
     font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
     padding: 5px; /* Ajusta o padding */
